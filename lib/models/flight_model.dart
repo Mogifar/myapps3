@@ -1,5 +1,3 @@
-import 'package:flutter/foundation.dart';
-
 /// Data model representing a single flight option.
 ///
 /// Fields are [final] for immutability. A [const] constructor is not used

@@ -65,7 +65,6 @@ class AppTheme {
         primary: amberPrimary,
         secondary: amberSecondary,
         surface: surfacePurple,
-        background: deepPurple,
         onPrimary: Color(0xFF000000), // text on amber buttons
         onSurface: textPrimary,
       ),

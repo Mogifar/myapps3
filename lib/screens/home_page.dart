@@ -73,9 +73,9 @@ class _HomePageState extends State<HomePage> {
     const labels = ['Round Trip', 'One Way', 'Multi-City'];
     return ToggleButtons(
       isSelected: List.generate(3, (i) => i == _tripTypeIndex),
-      onPressed: (index) => setState(() => _tripTypeIndex = index!),
+      onPressed: (index) => setState(() => _tripTypeIndex = index),
       borderRadius: BorderRadius.circular(12),
-      fillColor: Theme.of(context).colorScheme.primary.withOpacity(0.15),
+      fillColor: Theme.of(context).colorScheme.primary.withValues(alpha: 0.15),
       selectedBorderColor: Theme.of(context).colorScheme.primary,
       selectedColor: Theme.of(context).colorScheme.primary,
       children: labels
@@ -98,7 +98,7 @@ class _HomePageState extends State<HomePage> {
         Text(
           label,
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
               ),
         ),
         const SizedBox(height: 8),
@@ -109,7 +109,7 @@ class _HomePageState extends State<HomePage> {
             prefixIcon: Icon(icon, size: 20),
             hintText: label,
             hintStyle: TextStyle(
-              color: Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+              color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
             ),
           ),
         ),
@@ -128,7 +128,7 @@ class _HomePageState extends State<HomePage> {
         Text(
           label,
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
               ),
         ),
         const SizedBox(height: 8),
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
                     style: TextStyle(
                       color: date != null
                           ? Colors.white
-                          : Theme.of(context).colorScheme.onSurface.withOpacity(0.5),
+                          : Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.5),
                     ),
                   ),
                 ),
@@ -172,7 +172,7 @@ class _HomePageState extends State<HomePage> {
         Text(
           'Travellers & Class',
           style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                color: Theme.of(context).colorScheme.onSurface.withOpacity(0.7),
+                color: Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.7),
               ),
         ),
         const SizedBox(height: 8),
@@ -298,7 +298,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).colorScheme.background,
+      backgroundColor: Theme.of(context).colorScheme.surface,
       bottomNavigationBar: _buildBottomNavBar(),
       body: SafeArea(
         child: SingleChildScrollView(

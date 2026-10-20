@@ -14,7 +14,7 @@ class SearchResultsPage extends StatelessWidget {
     final colorScheme = Theme.of(context).colorScheme;
 
     return Scaffold(
-      backgroundColor: colorScheme.background,
+      backgroundColor: colorScheme.surface,
       appBar: AppBar(
         title: const Text('Search Results'),
         backgroundColor: colorScheme.surface,
@@ -85,7 +85,7 @@ class _FlightCard extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 18,
-                  backgroundColor: colorScheme.primary.withOpacity(0.15),
+                  backgroundColor: colorScheme.primary.withValues(alpha: 0.15),
                   child: Text(
                     flight.airlineCode,
                     style: TextStyle(
@@ -207,7 +207,7 @@ class _FlightCard extends StatelessWidget {
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                 decoration: BoxDecoration(
-                  color: Colors.green.withOpacity(0.15),
+                  color: Colors.green.withValues(alpha: 0.15),
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Row(
